@@ -1,0 +1,21 @@
+.table-container {
+ overflow-x: auto; 
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.4em 0;
+}
+table th {
+  text-align: left;
+}
+table tr {
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+  border-bottom-color: #aaaaaa;
+}
+table tr:first-child {
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-top-color: #aaaaaa;
+}
