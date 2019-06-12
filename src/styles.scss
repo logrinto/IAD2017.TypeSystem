@@ -3,3 +3,84 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 @import "./scss/typography";
+
+.responsive-container {
+  position: relative;
+  padding-bottom: 100%; // hier die Proportion zur Breite
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.responsive-item  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+}
+
+
+
+
+
+.container-grid-x {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 3%;
+  height: 100%;
+}
+
+.container-grid-xy {
+  grid-auto-flow: dense;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 3%;
+  grid-template-rows: repeat(12, 1fr);
+  grid-row-gap: 3%;
+  height: 100%;
+}
+
+.column-1to3 {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  background-color: yellow;
+}
+
+.column-4to12 {
+  grid-column-start: 4;
+  grid-column-end: span 9;
+  background-color: red;
+}
+
+.column-1to3.top {
+  grid-row-start: 1;
+  grid-row-end: span 3;
+}
+
+.column-1to3.bottom {
+  grid-row-start: 4;
+  grid-row-end: span 9;
+}
+
+.column-4to12.full {
+    grid-row-start: 1;
+    grid-row-end: span 12;
+}
+
+
+
+.card-2-4 {
+  grid-row: span 4;
+  grid-column: span 2;
+  background-color: blue;
+}
+
+
+.card-4-2 {
+  grid-row: span 2;
+  grid-column: span 4;
+  background-color: blue;
+}
